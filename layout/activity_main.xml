@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/applogo2"
+        android:layout_width="310dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="80dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/applogo2"/>
+
+    <TextView
+        android:id="@+id/choseDifficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/applogo2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:text="CHOOSE DIFFICULTY:"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#4CFF00"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/choseDifficulty"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="-8dp"
+        android:layout_marginEnd="20dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:id="@+id/easyLayout"
+            android:layout_width="340dp"
+            android:layout_height="210dp"
+            android:layout_marginStart="-10dp"
+            android:layout_marginEnd="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/difficulty"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <ImageView
+                android:layout_width="340dp"
+                android:layout_height="180dp"
+                android:background="@drawable/easy" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mediumLayout"
+            android:layout_width="340dp"
+            android:layout_height="210dp"
+            android:layout_below="@+id/easyLayout"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/difficulty"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <ImageView
+                android:layout_width="340dp"
+                android:layout_height="180dp"
+                android:background="@drawable/medium" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/hardLayout"
+            android:layout_width="340dp"
+            android:layout_height="210dp"
+            android:layout_below="@+id/mediumLayout"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/difficulty"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <ImageView
+                android:layout_width="340dp"
+                android:layout_height="180dp"
+                android:background="@drawable/hard" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/gtopBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/hardLayout"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/round_back_green20"
+            android:text="Go to topics"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</RelativeLayout>
