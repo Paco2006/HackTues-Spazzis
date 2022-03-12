@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/applogo2"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="80dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/applogo2" />
+
+    <TextView
+        android:id="@+id/choseDifficulty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/applogo2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:text="CHOOSE TOPIC:"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#4CFF00" />
+
+    <RelativeLayout
+        android:layout_width="391dp"
+        android:layout_height="600dp"
+        android:layout_below="@id/choseDifficulty"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="-7dp"
+        android:layout_marginEnd="20dp"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:id="@+id/planetLayout"
+            android:layout_width="302dp"
+            android:layout_height="206dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginEnd="1dp"
+            android:layout_weight="1"
+            android:background="@drawable/difficulty"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="166dp"
+                android:layout_gravity="center"
+                android:background="@drawable/planet2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/astrouLayout"
+            android:layout_width="223dp"
+            android:layout_height="232dp"
+            android:layout_below="@+id/planetLayout"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="-10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/difficulty"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="212dp"
+                android:layout_gravity="center"
+                android:background="@drawable/austro" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rocketLayout"
+            android:layout_width="340dp"
+            android:layout_height="210dp"
+            android:layout_below="@+id/astrouLayout"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/difficulty"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:background="@drawable/rocket" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/stqzBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/planetLayout"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="19dp"
+            android:background="@drawable/round_back_green20"
+            android:text="Start Quiz"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</RelativeLayout>
